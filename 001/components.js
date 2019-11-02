@@ -17,7 +17,7 @@ class GreetingTagElement extends HTMLElement{
 
     attributeChangedCallback(valueChange,oldValue,newValue){
         console.log(`${valueChange} = ${oldValue} -> ${newValue}`)
-    }
+    } 
 
     // Algo interesante es cuando el componente se esta construyendo en el DOM
     // primero se ejecutará esta función y luego el constructor
