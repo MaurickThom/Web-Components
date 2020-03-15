@@ -22,3 +22,10 @@ Los Web Components utilizan 3 APIs definidas por W3C :
     // npm i live-server -D
     // npx live-server
 ```
+
+## Referencia
+
+- [https://www.webcomponents.org/](https://www.webcomponents.org/)
+- [https://github.com/w3c/webcomponents](https://github.com/w3c/webcomponents)
+- [https://custom-elements-everywhere.com/](https://custom-elements-everywhere.com/)
+- [https://lit-element.polymer-project.org/](https://lit-element.polymer-project.org/)
