@@ -21,11 +21,8 @@ class GreetingTagElement extends HTMLElement{
 
     // Algo interesante es cuando el componente se esta construyendo en el DOM
     // primero se ejecutará esta función y luego el constructor
-<<<<<<< HEAD
     // es diferente al ngOnInit de Angular ya que en angular primero se ejecuta el contructor
     // y luego el ngOnInit 
-=======
->>>>>>> e68f2aa4a50fde364a19063920a20d16d27aa3ec
     static get observedAttributes(){
         return ['name']
     }
