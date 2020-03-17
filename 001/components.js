@@ -12,7 +12,7 @@ class GreetingTagElement extends HTMLElement{
     }
 
     disconnectedCallback(){
-
+        console.log('disconnected')
     }
 
     attributeChangedCallback(valueChange,oldValue,newValue){

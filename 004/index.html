@@ -5,9 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="components.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
 </head>
 <body>
-    <template>
+
+    <button id="notificar"> Notificar </button>
+    <div id="target">
+
+    </div>
+
+    <template id="notification">
+        <div class="error">
+            <p class="error__icon">
+                
+            </p>
+            <div class="error__body">
+                <p><strong class="error__title">
+                    <i class="fas fa-exclamation-triangle" style="color:red"></i>
+                    Error de Guardado
+                </strong></p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem temporibus, ut dolor, distinctio aliquid earum quisquam cum vitae quibusdam alias, odio optio nihil. Ratione sunt odit expedita non atque.
+                    <p>
+                        <button class="error__action">Intentar otra vez</button>
+                    </p>
+                </p>
+            </div>
+        </div>
+
     </template>
+
+    <script type="text/javascript">
+        const notification = document.getElementById('notification');
+        const target = document.getElementById('target');
+        const notificar = document.getElementById('notificar');
+        const content = notification.content;
+
+        /***/
+        
+
+        notificar.addEventListener('click',event=>{
+
+        });
+        
+    </script>
 </body>
 </html>
