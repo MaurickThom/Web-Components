@@ -13,7 +13,7 @@
 
     <button id="notificar"> Notificar </button>
     <div id="target">
-
+        <!-- <p>asdas</p> -->
     </div>
 
     <template id="notification">
@@ -41,13 +41,30 @@
         const notification = document.getElementById('notification');
         const target = document.getElementById('target');
         const notificar = document.getElementById('notificar');
-        const content = notification.content;
-
-        /***/
         
+        /*
+        
+        DOCUMENT FRAGMENT:
+        para poder acceder a sus hijos internos como en un documento DOM
+        const element = document.getElementById('input')
+        corresponde al nodo de tipo elemento 
+        https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=802:tipos-de-nodos-dom-document-element-text-attribute-comment-arbol-de-nodos-para-javascript-cu01124e&catid=78&Itemid=206
+        
+        que corresponde a un tag de html como se sabe el DOM es un arbol de nodos de diferentes tipos
+        
+        el DocumentFragmente representa un objeto de documento mínimo que no tiene
+        padre. Se utiliza como una versión ligera de document que almacena un segmento de una estructura de documento compuesta de nodos como un documento estandar.La diferencia se debe a que no forma para del DOM
+        los cambios realizados en el fragmento no afecta al documento
+        para poder acceder dentro de los hijos del documentoFragment
+        document.querySelector('template').content
+        
+        */
+        const content = notification.content;
+        // para poder agregar los nodos que no se encuentra en el dom principal
+        const imported = document.importNode(content,true) // true : de forma producda : recursiva
 
         notificar.addEventListener('click',event=>{
-
+            target.appendChild(imported)
         });
         
     </script>
