@@ -1,7 +1,8 @@
 # **Web Components**
 
-Es la agrupación de la vista (html + css) y la lógica (js) en forma modularizada.
-Son agnosticas a los frameworks
+conjunto de APIs para crear etiquetas personalizables con la funcion de agurpar la vista (html + css) y la lógica (js) de
+manera modularizada y/o encapsulada.
+Son agnosticas a los frameworks.
 
 Los Web Components utilizan 3 APIs definidas por W3C :
 
@@ -17,6 +18,14 @@ Los Web Components utilizan 3 APIs definidas por W3C :
     window.customElement.define('hello',HelloWorld)
 
 ```
+
+## **Ciclo de vida (LifeCycle Methods)**
+
+- **observedAttributes**
+- **constructor**
+- **connectedCallback**
+- **disconnectedCallback**
+- **attributeChangedCallback**
 
 ```js
     // npm i live-server -D
