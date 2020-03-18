@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <p>Tienes que arreglar los siguientes errores</p>
+    <ul>
+        <li class="error">Contraseña incorrecta</li>
+    </ul>
     
     <script src="components.js"></script>
+    <template id="notification">
+        <!-- <link rel="stylesheet" href="error.css"> -->
+        <div class="error">
+            <p class="error__icon">
+                
+            </p>
+            <div class="error__body">
+                <p><strong class="error__title">
+                    <i class="fas fa-exclamation-triangle" style="color:red"></i>
+                    Error de Guardado
+                </strong></p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem temporibus, ut dolor, distinctio aliquid earum quisquam cum vitae quibusdam alias, odio optio nihil. Ratione sunt odit expedita non atque.
+                    <p>
+                        <button class="error__action">Intentar otra vez</button>
+                    </p>
+                </p>
+            </div>
+        </div>
+    </template>
+    <x-notification></x-notification>
+    <script type="text/javascript">
+        // en este punto se viola el shadow dom
+        console.log(
+            document.querySelectorAll('.error')
+        )
+        // ya que el los estilos de la notificacion no deben afectar
+        // a otros elementos
+    </script>
 </body>
 </html>
