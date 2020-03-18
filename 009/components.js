@@ -1,8 +1,5 @@
 const TEMPLATE_HTML = /*html*/`
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" ></script>
-    <i class="fas fa-exclamation-triangle"></i>
-    <i class="fas fa-times"></i>
-    <i class="fas fa-check-double"></i>
 
     <link type="text/css" rel="stylesheet" href="notification.css">
     <div class="notification">
