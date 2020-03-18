@@ -30,6 +30,9 @@ class UserCard extends HTMLElement{
             mode:'open'
         })
         this.shadowRoot.appendChild(this.templateElement.content,true)
+        // this.shadowRoot.appendChild(
+        //     document.importNode(this.templateElement.content,true)
+        // )
     }
 
     attributeChangedCallback(attr,oldValue,newValue){

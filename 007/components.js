@@ -5,7 +5,7 @@ class NotificationElement extends HTMLElement{
             mode : "open"
         })
         this.template = document.getElementById('notification')
-        this.notification = document.importNode(this.template.content,true)
+        this.notification = document.importNode(this.template.cloneNode(true))
     }
     connectedCallback(){
         this.shadowRoot.appendChild(this.notification)
