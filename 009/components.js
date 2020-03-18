@@ -1,8 +1,13 @@
 const TEMPLATE_HTML = /*html*/`
-    <div class="notfication">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" ></script>
+    <i class="fas fa-exclamation-triangle"></i>
+    <i class="fas fa-times"></i>
+    <i class="fas fa-check-double"></i>
+
+    <link type="text/css" rel="stylesheet" href="notification.css">
+    <div class="notification">
         <p>
             <strong class="notification__icon">
-                <i id="icon" class="fas"></i>
             </strong>
         </p>
         <p>
@@ -29,40 +34,55 @@ class NotificationElement extends HTMLElement{
             mode:'open'
         })
         this.template = document.createElement('template')
-        this.shadowRoot.appendChild(this.template.cloneNode(true))
+        this.template.innerHTML = TEMPLATE_HTML
+        this.shadowRoot.appendChild(this.template.content.cloneNode(true))
+        this.options = {
+            error : {
+                linkCss : 'error.css',
+                arrClasses : ['fas','fa-times'],
+                contentButtons : 'Inetentalo otra vez'
+            },
+            warning : {
+                linkCss : 'warning.css',
+                arrClasses : ['fas','fa-exclamation-triangle'],
+                contentButtons : 'peligro'
+            },
+            success : {
+                linkCss : 'success.css',
+                arrClasses : ['fas','fa-check-double'],
+                contentButtons : 'hecho'
+            }
+        }
+        console.log(this.shadowRoot)
     }
     createLinkCss(type){
         const link = document.createElement('link')
         link.type = 'text/css'
         link.rel="stylesheet"
-        link.href = {
-            'error' : 'error.css',
-            'warning' : 'warning.css',
-            'success' : 'success.css' ,
-        }[type]
-
+        link.href = this.options[type].linkCss
         return link
     }
     createIcon(type){
-        let iconObj ={
-            'success': ['fa-times'],
-            'warning': ['fa-exclamation-triangle'],
-            'error'  : ['fa-check-double']
-        }
-        this.shadowRoot.getElementById('icon').classList.add(...iconObj[type])
+        const icon = document.createElement('i')
+        icon.classList.add(...this.options[type].arrClasses)
+        this.shadowRoot.querySelector('.notification__icon').appendChild(icon)
     }
     attributeChangedCallback(attr,oldValue,newValue){
         if( attr === 'title' ){
-            this.shadowRoot.querySelector('notification__title').textContent = newValue
+            this.shadowRoot.querySelector('.notification__title').textContent = newValue
         }
         if( attr === 'type' ){
-            this.createIcon(type)
-            this.shadowRoot.querySelector('notification').prepend(this.createLinkCss(newValue))
-            this.shadowRoot.querySelector('notification').classList.add(`${newValue}`)
-            this.shadowRoot.querySelector('notification__icon').classList.add(`${newValue}__icon`)
-            this.shadowRoot.querySelector('notification__title').classList.add(`${newValue}__title`)
-            this.shadowRoot.querySelector('notification__body').classList.add(`${newValue}__body`)
+            this.shadowRoot.querySelector('.notification').prepend(this.createLinkCss(newValue))
+            this.shadowRoot.querySelector('.notification').classList.add(`${newValue}`)
+            this.shadowRoot.querySelector('.notification__icon').classList.add(`${newValue}__icon`)
+            this.shadowRoot.querySelector('.notification__title').classList.add(`${newValue}__title`)
+            this.shadowRoot.querySelector('.notification__body').classList.add(`${newValue}__body`)
+            this.renderButtons(newValue)
+            this.createIcon(newValue)
         }
+    }
+    renderButtons(type){
+        this.shadowRoot.querySelector('.notification__action').textContent = this.options[type].contentButtons
     }
 
     connectedCallback(){
