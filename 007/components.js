@@ -13,13 +13,14 @@ class NotificationElement extends HTMLElement{
     }
     attributeChangedCallback(attr,oldValue,newValue){
 
-        // if( attr === 'title' ){
-        //     this.notification.querySelector('.error__title').innerText = newValue
-        // }
+        if( attr === 'title' ){
+            this.notification.querySelector('.error__title').innerText = newValue
+        }
     }
     static get observedAttributes(){
-        return ['']
+        return ['title']
     }
 }
 
 window.customElements.define('x-notification',NotificationElement)
+
