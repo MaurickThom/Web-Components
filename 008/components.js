@@ -8,6 +8,7 @@ const TEMPLATE_HTML = /*html*/`
             <p><slot name="email" /></p>
             <p><slot name="phone" /></p>
         </div>
+        
         <button id="toggle-info" class="user-card__action">Hide Info</button>
         </div>
     </div>
