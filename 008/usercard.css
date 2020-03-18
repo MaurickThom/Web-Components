@@ -1,0 +1,33 @@
+.user-card {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: darkorchid 5px solid;
+}
+/* :host {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: darkorchid 5px solid;
+} */
+
+.user-card__image {
+    width: 100%;
+}
+
+.user-card__action {
+    cursor: pointer;
+    background: darkorchid;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
