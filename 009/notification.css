@@ -3,6 +3,7 @@
     border: 1px solid black;
     border-radius: 10px;
     display: flex;
+    margin-top: 2rem;
 }
 
 .notification__title{
@@ -15,7 +16,4 @@
     background-color: #eee;
     padding: 2px 16px;
     font-weight: bold;
-}
-.notification__icon{
-    color:red
 }

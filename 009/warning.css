@@ -1,0 +1,9 @@
+:host{
+    border:1px solid rgb(226, 226, 69)
+}
+.notification__title.warning__title{
+    color: rgb(226, 226, 69)
+}
+i{
+    color : rgb(226, 226, 69)
+}

@@ -1,0 +1,9 @@
+:host{
+    border:1px solid red
+}
+.notification__title.error__title{
+    color: red;
+}
+i{
+    color :red;
+}

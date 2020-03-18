@@ -1,0 +1,9 @@
+:host{
+    border:1px solid green
+}
+.notification__title.success__title{
+    color: green;
+}
+i{
+    color:green
+}

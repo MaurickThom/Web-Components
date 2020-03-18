@@ -1,13 +1,10 @@
 const TEMPLATE_HTML = /*html*/`
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" ></script>
-
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <link type="text/css" rel="stylesheet" href="notification.css">
     <div class="notification">
         <p>
             <strong class="notification__icon">
             </strong>
-        </p>
-        <p>
             <strong class="notification__title">
             </strong>
         </p>
