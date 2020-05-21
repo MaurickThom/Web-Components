@@ -38,3 +38,4 @@ Los Web Components utilizan 3 APIs definidas por W3C :
 - [https://github.com/w3c/webcomponents](https://github.com/w3c/webcomponents)
 - [https://custom-elements-everywhere.com/](https://custom-elements-everywhere.com/)
 - [https://lit-element.polymer-project.org/](https://lit-element.polymer-project.org/)
+- [https://dev.to/bennypowers/lets-build-web-components-part-1-the-standards-3e85](https://dev.to/bennypowers/lets-build-web-components-part-1-the-standards-3e85)
